@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Eve.Settings.csproj" />
+    <ProjectReference Include="..\Eve.Settings\Eve.Settings.csproj" />
   </ItemGroup>
 
 </Project>
