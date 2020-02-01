@@ -3,9 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eve.Settings", "Eve.Settings/Eve.Settings.csproj", "{F3608E53-4BC1-4C52-8724-F5749A54D88B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eve.Settings", "Eve.Settings\Eve.Settings.csproj", "{F3608E53-4BC1-4C52-8724-F5749A54D88B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eve.SettingsTest", "Eve.SettingsTest/Eve.SettingsTest.csproj", "{F89E9300-BD59-45D7-88AE-C712ADEA6FCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eve.SettingsTest", "Eve.SettingsTest\Eve.SettingsTest.csproj", "{F89E9300-BD59-45D7-88AE-C712ADEA6FCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2AE5F64F-68BC-46D1-B416-4BB0A5DEDC4C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
