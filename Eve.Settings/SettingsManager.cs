@@ -98,10 +98,13 @@ namespace Eve.Settings
             lock (EventSchedule)
             {
                 EventSchedule.Stop();
-                var module = e.Name.Remove(e.Name.Length - 6, 5);
-                if (!SettingsInfoes.ContainsKey(module))
+                var module = e.Name.Remove(e.Name.Length - 5, 5);
+                if (SettingsInfoes.ContainsKey(module))
                 {
-                    SettingsInfoes[module].Updated = true;
+                    var info = SettingsInfoes[module];
+                    info.Updated = true;
+                    this.ReloadSettings(module, info.SettingsType);
+                    info.OnChange?.Invoke(_Cache.Get(_DefaultSettingsKey, module, info.SettingsType));
                 }
                 EventSchedule.Start();
             }
