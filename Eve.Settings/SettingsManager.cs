@@ -138,6 +138,11 @@ namespace Eve.Settings
             return _Cache.Get(_DefaultSettingsKey, moduleName, type);
         }
 
+        public void RegisterEvent(Type settingType, Action<object> action)
+        {
+            RegisterEvent(Names[settingType.GetHashCode()], action);
+        }
+
         public void RegisterEvent(string moduleName, Action<object> action)
         {
             lock (SettingsInfoes)
@@ -145,6 +150,11 @@ namespace Eve.Settings
                 if (SettingsInfoes.ContainsKey(moduleName))
                     SettingsInfoes[moduleName].OnChange = SettingsInfoes[moduleName].OnChange + action;
             }
+        }
+
+        public void RemoveEvent(Type settingType, Action<object> action)
+        {
+            RemoveEvent(Names[settingType.GetHashCode()], action);
         }
 
         public void RemoveEvent(string moduleName, Action<object> action)
